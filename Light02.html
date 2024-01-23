@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Blinking Lights</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .light {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        .light1 {
+            background-color: skyblue;
+            animation-name: blink1;
+        }
+
+        .light2 {
+            background-color: purple;
+            animation-name: blink2;
+        }
+
+        .light3 {
+            background-color: lightpink;
+            animation-name: blink3;
+        }
+
+        .light4 {
+            background-color: orange;
+            animation-name: blink4;
+        }
+
+        .light5 {
+            background-color: #fff4e6,green; /* Cream */
+            animation-name: blink5;
+        }
+
+        @keyframes blink1 {
+            0%, 100% { transform: translate(0, 0); opacity: 1; }
+            50% { transform: translate(50px, -50px); opacity: 0; }
+        }
+
+        @keyframes blink2 {
+            0%, 100% { transform: translate(0, 0); opacity: 1; }
+            50% { transform: translate(-50px, 50px); opacity: 0; }
+        }
+
+        @keyframes blink3 {
+            0%, 100% { transform: translate(0, 0); opacity: 1; }
+            50% { transform: translate(-50px, -50px); opacity: 0; }
+        }
+
+        @keyframes blink4 {
+            0%, 100% { transform: translate(0, 0); opacity: 1; }
+            50% { transform: translate(50px, 50px); opacity: 0; }
+        }
+
+        @keyframes blink5 {
+            0%, 100% { transform: translate(0, 0); opacity: 1; }
+            50% { transform: translate(-50px, -50px); opacity: 0; }
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="light light1"></div>
+    <div class="light light2"></div>
+    <div class="light light3"></div>
+    <div class="light light4"></div>
+    <div class="light light5"></div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <!-- Add your login form here -->
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // You can add more JavaScript functionality here if needed.
+    </script>
+</body>
+</html>
+
+
